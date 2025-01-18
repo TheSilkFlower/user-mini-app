@@ -1,0 +1,41 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="images/ico.png" sizes="32x32" type="image/png">
+    <link rel="stylesheet" href="style.css">
+    <title>Cookies</title>
+</head>
+<body>
+    <header class="header-app">Реализация пользовательского интерфейса</header>
+    <main class="wrapper">
+        <div class="user-block">
+            <div class="inner">
+                <select id="user-block__theme">
+                <option value="0" disabled selected>Сменить тему</option>
+                <option value="light">Светлая</option>
+                <option value="dark">Тёмная</option>
+            </select>
+            <select id="user-block__notifications">
+                <option value="0" disabled selected>Выбрать уровень уведомлений</option>
+                <option value="little">Малый</option>
+                <option value="middle">Средний</option>
+                <option value="big">Высокий</option>
+            </select>
+            </div>
+            <button class="btn btn_reset">Сбросить настройки</button>
+        </div>
+        <div class="user-block__info">
+            <p class="user-block__info-not-cookie">Вы сбросили настройки оформления!</p>
+            <p class="user-block__info-theme"></p>
+            <p class="user-block__info-notif"></p>
+        </div>
+    </main>
+    <footer class="footer-app">
+        <div class="footer-app__rights">Все права защищены ©</div>
+        <a href="2025" class="footer-app__time">2025</a>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
