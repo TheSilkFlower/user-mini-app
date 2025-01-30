@@ -69,6 +69,7 @@ window.addEventListener('DOMContentLoaded', () => {
 function setCookie(name, value) {
     // берём текущее время + 7 дней
     const date = new Date(Date.now() + (7 * 24 * 60 * 60 * 1000))
+    date.setHours(date.getHours() + 3)
     const expires = date.toUTCString()
 
     // устанавливаем cookie с защитой secure и samesite
