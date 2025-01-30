@@ -38,6 +38,8 @@ window.addEventListener('DOMContentLoaded', () => {
                     userTheme.style.color = 'white'
                     userNotif.style.color = 'white'
                     break
+                default:
+                    userTheme.innerHTML = ''
             }
         } 
         
@@ -123,16 +125,15 @@ function getValueFromSelectTheme() {
 
 // функция сброса cookie
 function deleteCookie () {
+    const cookiesToDelete = ['theme', 'notif']
     const cookies = document.cookie.split(';')
 
-    for(let i = 0; i < cookies.length; i++) {
-        const cookie = cookies[i]
-
-        const select = cookie.indexOf('=')
-        const name = select > -1 ? cookie.substring(0, select) : cookie
-
-        document.cookie = name + '=;max-age=0;path=/;'
-    }
+    cookies.forEach(cookie => {
+        const cookieName = cookie.split('=')[0].trim()
+        if(cookiesToDelete.includes(cookieName)) {
+            document.cookie = cookieName + '=;max-age=0;path=/;'
+        }
+    });
 
     userBlock.style.background = '#fff'
 
