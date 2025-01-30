@@ -11,7 +11,7 @@ userTheme.innerHTML = 'Выберите тему'
 userNotif.innerHTML = 'Выберите уровень уведомлений'
 
 // запрашиваем информацию о cookie при загрузке страницы
-window.onload = function() {
+window.addEventListener('DOMContentLoaded', () => {
     try {
         const cookies = document.cookie
 
@@ -63,6 +63,7 @@ window.onload = function() {
         console.log('Не удалось получить информацию о cookie')
     }
 }
+)
 
 // функция для установки cookie
 function setCookie(name, value) {
